@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Happy birthday</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple HTML5 Template.">
+	<meta name="author" content="Shashank">
+	<style>
+		html, body, * {
+			margin:0;
+			padding:0;
+			font-family: Lucida Handwriting;
+		}
+
+		.container {
+			position:relative;
+		}
+
+		.hero {
+			width:100%;
+			height:100vh;
+			background-image: url(img/birthk.jpg);
+			background-blend-mode: multiply;
+			background-color: pink;
+			background-size: cover;
+			background-position:center;
+			position:relative;
+			overflow:hidden;
+		}
+
+		.navbar {
+			background-color: white;
+			width:85%;
+			height:25%;
+			margin:auto;
+			display:flex;
+			align-items:center;
+			justify-content: space-between;
+		}
+
+		.navbar svg {
+			margin-left: 2rem;
+			height:3rem;
+			width:3rem;
+		}
+
+		.navbar button {
+			border:none;
+			background-color: transparent;
+			color:black;
+			padding:1rem;
+			margin:2rem;
+			border:2px solid black;
+			border-radius:20px;
+			cursor:pointer;
+			transition: all 0.2s ease-in-out; 
+		}
+
+		.navbar button:hover {
+			background-color: rgba(160,32,240, 0.9);
+			transform: scale(1.08);
+			border-color: #fff;
+			color:#fff;
+		}
+
+		@keyframes leaves {
+		    0% {
+		        transform: scale(1.0);
+		    }
+		    100% {
+		        transform: scale(2.0);
+		    }
+		}
+
+		.envelope-animation {
+			animation-name: leaves;
+			animation-duration: 0.5s;
+			animation-fill-mode: forwards;
+		}
+
+		.envelope {
+			position:absolute;
+			top:20%;
+			bottom:0;
+			left:0;
+			right:0;
+			background-color: ghostwhite;
+			border-radius: 5px;
+			height:60%;
+			width:80%;
+			margin:auto;
+			transition: all 0.5s ease-in-out;
+			overflow: hidden;
+		}
+
+		.seal-flap {
+		  width: 0; 
+		  height: 0; 
+		  border-left: 40vw solid transparent;
+		  border-right: 40vw solid transparent; 
+		  border-top: 30vh solid #cfcfcf;
+		}
+		
+		.envelope-text {
+			width:12%;
+			color:#f768b4;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:3%;
+			padding-top:2rem;
+			padding-bottom:2rem;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<section class="container">
+		<div class="hero">
+			<nav class="navbar">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				  <path fill-rule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clip-rule="evenodd"/>
+				</svg>
+				<button class="button">Open Card</button>
+			</nav>
+		</div>
+
+		<div class="envelope">
+			<div class="seal-flap">
+				
+			</div>
+			<h3 class="envelope-text">For Aisha</h3>
+			<hr style="width:35%; margin:auto;">
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', ()=> {
+			document.querySelector('.button').addEventListener('click', () => {
+				envelopeAnimtion()
+			})
+		})
+
+		function envelopeAnimtion() {
+			document.querySelector('.envelope').classList.add("envelope-animation")
+			setTimeout(myGreeting, 500)
+		}
+
+		function myGreeting() {
+			window.location.href = "birthdayPage.html";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Happy birthday</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple HTML5 Template.">
+	<meta name="author" content="Shashank">
+	<style>
+		html, body, * {
+			margin:0;
+			padding:0;
+			font-family: Lucida Handwriting;	
+		}
+
+		body {
+			background-color: rgba(247, 183, 200, 0.1);
+		}
+
+		.heading {
+			text-align:center;
+			padding:2rem;
+			color:#fff;
+			border:5px solid #fff;
+			background-color: rgba(224, 56, 107, 1);
+		}
+
+		.container {
+			position: relative;
+		}
+
+		.l-corner-img {
+			width:20%;
+			position: absolute;
+			top:0;
+			left:0;
+		}
+
+		.img-card {
+			margin-left: auto;
+		    margin-right: auto;
+	    	border: 10px solid #f0e36e;
+	    	width:50%;
+	    	padding:3rem;
+	    	background-color: #fff;
+	    	display: grid;
+		    grid-template:
+		    'imgone imgtwo';
+		    grid-gap: 10px;
+		}
+
+		.img-card .img1 {
+			grid-area: imgone;
+		}
+
+		.img-card .img2 {
+			grid-area: imgtwo;
+		}
+	    .text {
+			width:60%;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:1rem;
+			margin-bottom: 1rem;
+			text-align: center;
+			background-color: #fa4b80;
+			color:white;
+			padding:2rem;
+			word-wrap:break-word;
+		}
+
+		.balloons img {
+			width:100px;
+			animation: balloon 7s linear infinite;
+		}
+
+		@keyframes balloon {
+			0% {
+				transform:translateY(0);
+				opacity: 0;
+			}
+
+			100% {
+				transform:translateY(-130vh);
+				opacity: 1;
+			}
+		}
+
+		.balloons img:nth-child(1) {
+			animation-delay: 2s
+			background-color:red;
+		}
+
+		.balloons img:nth-child(2) {
+			animation-delay: 4s
+		}
+
+		.balloons img:nth-child(3) {
+			animation-delay: 3.5s
+		}
+
+		.balloons img:nth-child(4) {
+			animation-delay: 6s
+		}
+
+		.balloons img:nth-child(5) {
+			animation-delay: 5.5s
+		}
+
+		.balloons img:nth-child(6) {
+			animation-delay: 1s
+		}
+
+		.balloons img:nth-child(7) {
+			animation-delay: 2s
+		}
+
+		.balloons img:nth-child(8) {
+			animation-delay: 4s
+		}
+
+		.balloons img:nth-child(9) {
+			animation-delay: 3.5s
+		}
+
+		.balloons img:nth-child(10) {
+			animation-delay: 6s
+		}
+
+		.balloons img:nth-child(11) {
+			animation-delay: 5.5s
+		}
+
+		.balloons img:nth-child(12) {
+			animation-delay: 1s
+		}
+
+		.balloons {
+			width:100%;
+			display:flex;
+			flex-wrap:wrap;
+			align-items: center;
+			justify-content: space-around;
+			position: absolute;
+			bottom:0;
+		}
+
+		/*Filter styles*/
+		.saturate { filter: saturate(3); }
+		.grayscale { filter: grayscale(100%); }
+		.contrast { filter: contrast(160%); }
+		.brightness { filter: brightness(0.25); }
+		.blur { filter: blur(3px); }
+		.invert { filter: invert(100%); }
+		.sepia { filter: sepia(100%); }
+		.huerotate { filter: hue-rotate(180deg); }
+		.rss.opacity { filter: opacity(50%); }
+
+		@media only screen and (max-width: 600px) {
+		  .img-card {
+		  	grid-template:
+		    'imgone imgone'
+		    'imgtwo imgtwo'
+		  }
+
+		  .l-corner-img {
+		  	width:30%;
+		  }
+
+		  .heading {
+		  	font-size:1rem;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<section class="container">
+		<div>
+			<img class="l-corner-img" src="img/flower.png">
+			<h1 class="heading">
+				Happy
+				<br> 
+				Birthday
+				<br>
+				Aisha Setia
+			</h1>
+			<div class="img-card">
+				<img class="img1" src="img/pic (1).png" style="width:100%">
+				<img class="img2" src="img/cake.jpg" style="width:100%">
+			</div>
+
+			<div class="text">
+				<h1>Wish You a lovely birthday!</h1><br>
+				<p>May This year brings a lot of happiness in your life. it was really nice meeting you oh sorry! texting you Lol!. Funny that I used this medium to wish You but that's one little thing I thought I could use to just contribute a little innitiative from my side in your day. Life is full of changes; they could be positive or negative. I wish your life is full of positive changes as you strive towards excellence. Once again have a wonderful birthday ;)</p>
+			</div>
+
+			<div class="balloons">
+				<img class="saturate" src="img/balloon.png">
+				<img class="grayscale" src="img/balloon.png">
+				<img class="contrast" src="img/balloon.png">
+				<img class="brightness" src="img/balloon.png">
+				<img class="sepia" src="img/balloon.png">
+				<img class="invert" src="img/balloon.png">
+				<img class="sepia" src="img/balloon.png">
+				<img class="huerotate" src="img/balloon.png">
+				<img class="invert" src="img/balloon.png">
+				<img class="saturatehuerotate" src="img/balloon.png">
+				<img class="brightness" src="img/balloon.png">
+				<img class="grayscale" src="img/balloon.png">
+			</div>
+		</div>
+	</section>
+</body>
+</html>
